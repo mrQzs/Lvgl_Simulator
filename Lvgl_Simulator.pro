@@ -2,10 +2,9 @@ TEMPLATE = app
 CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
-
-
-
 INCLUDEPATH += $$PWD/include
+
+TARGET = LVGLSimulator
 
 greaterThan(QT_MAJOR_VERSION,4){
         TARGET_ARCH=$${QT_ARCH}
@@ -16,7 +15,7 @@ contains(TARGET_ARCH, x86_64){
 #ifdef _MSC_VER
     LIBS += -L$$PWD/lib/msvc/x64/ -lSDL2main -lSDL2
 #elif __GNUC__
-    LIBS += -L$$PWD/lib/mingw/x64/  -lSDL2main -lSDL2
+    LIBS += -L$$PWD/lib/mingw/x64/ -lSDL2main -lSDL2
 #endif
     CONFIG(debug, debug|release){
         MOC_DIR = build/x64/moc/debug
@@ -35,7 +34,7 @@ contains(TARGET_ARCH, x86_64){
 #ifdef _MSC_VER
     LIBS += -L$$PWD/lib/msvc/win32/ -lSDL2main -lSDL2
 #elif __GNUC__
-    LIBS += -L$$PWD/lib/mingw/win32/ -lmingw32 -lSDL2main -lSDL2
+    LIBS += -L$$PWD/lib/mingw/win32/ -lSDL2main -lSDL2
 #endif
     CONFIG(debug, debug|release){
         MOC_DIR = build/win32/moc/debug
@@ -191,7 +190,10 @@ SOURCES += main.c \
     lv_examples/assets/lv_font_montserrat_16_compr_az.c \
     lv_examples/assets/lv_font_montserrat_28_compr_az.c \
     lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c \
-    lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c
+    lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c \
+    testcode/app.c \
+    testcode/lv_font_chinese_16.c \
+    testcode/page_1.c
 
 HEADERS += \
     include/SDL2/begin_code.h \
@@ -381,7 +383,9 @@ HEADERS += \
     lvgl/src/lv_widgets/lv_textarea.h \
     lvgl/src/lv_widgets/lv_tileview.h \
     lvgl/src/lv_widgets/lv_win.h \
-    lvgl/src/lvgl.h
+    lvgl/src/lvgl.h \
+    testcode/app.h \
+    testcode/page_1.h
 
 OTHER_FILES +=
 

@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #ifdef __GNUC__
 #include <unistd.h>
+#elif _MSC_VER
+#include <windows.h>
 #endif
 #define SDL_MAIN_HANDLED /*To fix SDL's "undefined reference to WinMain" \
                             issue*/
@@ -22,6 +24,7 @@
 #include "lv_drivers/indev/mouse.h"
 #include "lv_drivers/indev/mousewheel.h"
 #include "lvgl/lvgl.h"
+#include "testcode/app.h"
 
 /*********************
  *      DEFINES
@@ -71,7 +74,8 @@ int main(int argc, char **argv) {
   // lv_demo_benchmark();
   // lv_demo_printer();
   // lv_ex_tabview_1();
-  lv_btn_create(lv_scr_act(), NULL);
+  //lv_btn_create(lv_scr_act(), NULL);
+  app();
   while (1) {
     /* Periodically call the lv_task handler.
      * It could be done in a timer interrupt or an OS task too.*/

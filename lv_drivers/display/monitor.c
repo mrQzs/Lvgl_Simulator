@@ -368,7 +368,7 @@ static void monitor_sdl_refr_core(void)
 
 static void window_create(monitor_t * m)
 {
-    m->window = SDL_CreateWindow("TFT Simulator",
+    m->window = SDL_CreateWindow("LVGL Simulator",
                               SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
                               MONITOR_HOR_RES * MONITOR_ZOOM, MONITOR_VER_RES * MONITOR_ZOOM, 0);       /*last param. SDL_WINDOW_BORDERLESS to hide borders*/
 
