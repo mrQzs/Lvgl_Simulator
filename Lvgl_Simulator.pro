@@ -192,8 +192,11 @@ SOURCES += main.c \
     lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c \
     lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c \
     testcode/app.c \
+    testcode/lv_font_123abc_16.c \
     testcode/lv_font_chinese_16.c \
-    testcode/page_1.c
+    testcode/lv_font_chinese_30.c \
+    testcode/page_1.c \
+    testcode/timefuncs.c
 
 HEADERS += \
     include/SDL2/begin_code.h \
@@ -248,19 +251,6 @@ HEADERS += \
     include/SDL2/SDL_surface.h \
     include/SDL2/SDL_system.h \
     include/SDL2/SDL_syswm.h \
-    include/SDL2/SDL_test.h \
-    include/SDL2/SDL_test_assert.h \
-    include/SDL2/SDL_test_common.h \
-    include/SDL2/SDL_test_compare.h \
-    include/SDL2/SDL_test_crc32.h \
-    include/SDL2/SDL_test_font.h \
-    include/SDL2/SDL_test_fuzzer.h \
-    include/SDL2/SDL_test_harness.h \
-    include/SDL2/SDL_test_images.h \
-    include/SDL2/SDL_test_log.h \
-    include/SDL2/SDL_test_md5.h \
-    include/SDL2/SDL_test_memory.h \
-    include/SDL2/SDL_test_random.h \
     include/SDL2/SDL_thread.h \
     include/SDL2/SDL_timer.h \
     include/SDL2/SDL_touch.h \
@@ -383,9 +373,9 @@ HEADERS += \
     lvgl/src/lv_widgets/lv_textarea.h \
     lvgl/src/lv_widgets/lv_tileview.h \
     lvgl/src/lv_widgets/lv_win.h \
-    lvgl/src/lvgl.h \
     testcode/app.h \
-    testcode/page_1.h
+    testcode/page_1.h \
+    testcode/timefuncs.h
 
 OTHER_FILES +=
 
